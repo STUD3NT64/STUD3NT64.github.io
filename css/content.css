@@ -1,0 +1,159 @@
+.tab-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+[data-tab-target] {
+  cursor: pointer;
+}
+
+[data-tab-content] > h3 {
+  position: absolute;
+  text-align: center;
+  font-size: 2em;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+  color: black;
+  border-bottom: 2px solid var(--blue);
+}
+
+[data-tab-content] > h2 {
+  position: absolute;
+  text-align: center;
+  font-size: 3em;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+  color: black;
+  border-bottom: 2px solid var(--blue);
+}
+
+.container_card {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_card .cards {
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.container_card .cards .face {
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+}
+
+.container_card .cards .face .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container_card .cards .face.face1 {
+  position: relative;
+  background: var(--blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+  border: 2px solid black;
+}
+
+.container_card .cards:hover .face.face1 {
+  transform: translateY(0);
+  border-bottom: none;
+}
+
+.container_card .cards .face.face1 .content {
+  opacity: 0.2;
+  transition: 0.5s;
+}
+
+.container_card .cards:hover .face.face1 .content {
+  opacity: 1;
+}
+
+.container_card .cards .face.face1 .content img {
+  max-width: 160px;
+}
+
+.container_card .cards .face.face1 .content h3 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.container_card .cards .face.face2 {
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
+  border: 2px solid black;
+}
+
+.container_card .cards:hover .face.face2 {
+  transform: translateY(0);
+  border-top: none;
+}
+
+.container_card .cards .face.face2 .content p {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1031px) {
+  .container_card {
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  }
+  [data-tab-content] > h2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  [data-tab-content] > h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  [data-tab-content] > h3 {
+    font-size: 1.5em;
+  }
+}

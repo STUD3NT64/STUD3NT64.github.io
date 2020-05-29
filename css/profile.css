@@ -1,0 +1,257 @@
+.container__profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 40;
+  transition: 0.5s ease-in-out;
+}
+
+.container__profile.active {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 500px;
+  background: black;
+  border-radius: 25px;
+  box-shadow: 0 0 30px 1px whitesmoke;
+}
+
+.card .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+
+.card .icons .exit-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.card .icons .exit-card button {
+  border: none;
+  background: none;
+  outline: none;
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.card .icons .exit-card i {
+  border: solid whitesmoke;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
+}
+
+.card .icons .exit-card .arrow-left {
+  color: whitesmoke;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.card .icons .like-settings {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.card .icons .like-settings .like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.card .icons .like-settings .like button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 80%;
+  height: 80%;
+}
+
+.card .icons .like-settings .settings {
+  width: 15px;
+  height: 30px;
+}
+
+.card .icons .like-settings .settings button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.card .icons .like-settings .settings .circle {
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background: whitesmoke;
+  margin-bottom: 1px;
+}
+
+.heart {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  left: -2px;
+}
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 0;
+  width: 13px;
+  height: 20px;
+  background: whitesmoke;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.heart.active::after,
+.heart.active::before {
+  background: red;
+}
+
+.avatar-profile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  z-index: 3;
+}
+
+.avatar-profile .avatar-img {
+  width: 150px;
+  height: 150px;
+  border: 3px solid var(--blue);
+  border-radius: 100%;
+}
+
+.avatar-profile .avatar-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.login-name {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  z-index: 3;
+}
+
+.login-name p {
+  letter-spacing: 3px;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.data-profile {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 80px;
+}
+
+.data-profile p {
+  font-family: sans-serif;
+  color: whitesmoke;
+  margin-left: 10px;
+  padding: 4px;
+  z-index: 3;
+}
+
+.data-profile p:nth-child(1) {
+  margin-top: 10px;
+}
+
+.logo__profile {
+  position: absolute;
+  top: 140px;
+  left: 24px;
+}
+
+.card .logo__profile img {
+  width: 250px;
+  height: 250px;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.sett_ings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  left: 170px;
+  top: 60px;
+  width: 40%;
+  background: rgba(52, 107, 124, 0.9);
+  z-index: 5;
+  border-radius: 10px;
+  display: none;
+}
+
+.sett_ings.active {
+  display: block;
+}
+
+.sett_ings a {
+  margin: 3px;
+  text-align: center;
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 5px;
+  transition: 0.5s ease-in-out;
+}
+
+.sett_ings a:hover {
+  color: #000;
+  transition: 0.5s ease-in-out;
+}

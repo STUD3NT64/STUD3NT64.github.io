@@ -1,0 +1,146 @@
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 30;
+    transition: .5s ease-in-out;
+}
+
+.forceback {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    background: #000;
+    border-radius: 25px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 40;
+    box-shadow: 0 0 30px 1px whitesmoke;
+    transition: 0.5s ease-in-out;
+}
+
+.forceback span{
+    position: absolute;
+    color: whitesmoke;
+    font-size: 50px;
+    top: -15px;
+    left: 270px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.forceback.active,
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.fbbg.active {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.rezervh1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    width: 100%;
+    height: 60px;
+    z-index: 2;
+}
+
+.rezervh1 h1 {
+    text-align: center;
+    width: 200px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.inputs__rezerv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 250px;
+}
+
+.inputs__rezerv #mesta, #data_time, #FIO, #telephone {
+    border: none;
+    background: var(--blue);
+    width: 80%;
+    height: 40px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    z-index: 2;
+    text-align: center;
+    outline: none;
+    color: whitesmoke;
+    text-overflow: ellipsis;
+    font-family: sans-serif;
+}
+
+.inputs__rezerv ::placeholder {
+    color: whitesmoke;
+    font-family: sans-serif;
+    opacity: 0.3;
+}
+
+.inputs__rezerv .input_rezerv::placeholder {
+    text-indent: 0px;
+    transition: 2s ease;
+}
+
+.inputs__rezerv .input_rezerv:focus::placeholder {
+    text-indent: 500px;
+    transition: 2s ease;
+}
+
+.button__rezerv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+
+.button__rezerv button {
+    width: 80%;
+    height: 40px;
+    border-radius: 100px;
+    background: var(--blue);
+    opacity: 0.8;
+    border: 2px solid whitesmoke;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 1s ease;
+}
+
+.button__rezerv button:hover {
+    color: var(--blue);
+    background-color: whitesmoke;
+    border: 2px solid var(--blue);
+    transition: 1s ease;
+}

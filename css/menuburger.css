@@ -1,0 +1,218 @@
+.hamburger_btn {
+  width: 50px;
+  height: 50px;
+  margin-left: 100px;
+  border-radius: 50%;
+  background: black;
+  border: 2px solid whitesmoke;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger_btn > div {
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background: whitesmoke;
+  border-radius: 100px;
+  transition: all 0.3s linear;
+}
+.hamburger_btn .one {
+  top: 25%;
+}
+
+.hamburger_btn .three {
+  top: 65%;
+}
+
+.menu {
+  position: absolute;
+  left: 26px;
+  top: 65px;
+  width: 200px;
+  height: 250px;
+  background-color: black;
+  border-radius: 25px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  z-index: 98;
+}
+
+.menu ul li {
+  text-align: center;
+  text-transform: uppercase;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+}
+
+.menu ul li a {
+  width: 150px;
+  padding: 10px;
+  font-size: 16px;
+  background: var(--blue);
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  margin-top: 15px;
+  position: relative;
+  z-index: 99;
+}
+
+.menu ul li a:nth-child(1) {
+  margin-top: 20px;
+}
+
+.menu ul li a:nth-child(5) {
+  margin-bottom: 20px;
+}
+
+.menu ul li a:hover {
+  color: var(--blue);
+  background-color: white;
+  transition: 0.5s;
+}
+
+.logo__menu img {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.3;
+  width: 150px;
+  height: 150px;
+  z-index: 6;
+}
+
+.hamburger_btn.active {
+  transform: rotate(90deg);
+}
+
+.hamburger_btn.active .one {
+  top: 46%;
+  left: 25%;
+  transform: rotate(135deg);
+  transition: 0.5s all;
+}
+
+.hamburger_btn.active .two {
+  transform: rotate(360deg);
+  transition: 0.5s all;
+  opacity: 0;
+}
+
+.hamburger_btn.active .three {
+  top: 46%;
+  left: 25%;
+  transform: rotate(-135deg);
+  transition: 0.5s all;
+}
+
+.menu.active {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  visibility: visible;
+}
+
+.btn-rezerv {
+  width: 200px;
+  height: 40px;
+  font-family: "2", sans-serif;
+  font-size: 18px;
+  margin-right: 100px;
+  border-radius: 100px;
+  background: black;
+  border: 2px solid whitesmoke;
+  color: whitesmoke;
+  cursor: pointer;
+  letter-spacing: 2px;
+  outline: none;
+  transition: 1s ease;
+  position: relative;
+  z-index: 99;
+}
+
+.btn-rezerv:hover {
+  color: #000;
+  background: #f5f5f5;
+  border: 2px solid black;
+  transition: 1s ease;
+}
+
+@media screen and (max-width: 660px) {
+  .hamburger_btn {
+    margin-left: 40px;
+    width: 40px;
+    height: 40px;
+  }
+  .btn-rezerv {
+    margin-right: 20px;
+    font-size: 14px;
+    height: 30px;
+    width: 170px;
+  }
+  .menu {
+    position: absolute;
+    left: 12px;
+    top: 55px;
+    width: 100px;
+    height: 160px;
+    border-radius: 15px;
+  }
+  .menu ul li {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 160px;
+  }
+
+  .menu ul li a {
+    width: 80px;
+    height: 20px;
+    padding: 4px;
+    font-size: 11px;
+    margin-top: 10px;
+    background: var(--blue);
+    text-decoration: none;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    border-radius: 25px;
+  }
+  .hamburger_btn > div {
+    height: 3px;
+  }
+  .logo__menu img {
+    z-index: 1;
+    position: absolute;
+    top: 45px;
+    left: 5px;
+    opacity: 0.3;
+    width: 90px;
+    height: 90px;
+    z-index: 2;
+  }
+  .header1 {
+    height: 50px;
+  }
+  .menu ul li a:nth-child(1) {
+    margin-top: 10px;
+  }
+
+  .menu ul li a:nth-child(5) {
+    margin-bottom: 10px;
+  }
+}
